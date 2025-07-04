@@ -91,15 +91,16 @@ sudo systemctl restart filebeat
 ```
 
 ### 💣 Simulate Attacks (localhost)
+```bash
 🚨 SSH Brute Force
--hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.x.x
+hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.x.x
 
 🚨 SQL Injection
--curl "http://192.168.x.x/?id=1%27%20OR%20%271%27%3D%271"
+curl "http://192.168.x.x/?id=1%27%20OR%20%271%27%3D%271"
 
 🚨 XSS Payload
--curl "http://192.168.x.x/?q=<script>alert(1)</script>"
-
+curl "http://192.168.x.x/?q=<script>alert(1)</script>"
+```
 
 ### Start Alert Script
 ```bash
