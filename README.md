@@ -16,14 +16,6 @@ This project simulates a real-world SOC pipeline using open source tools:
 
 > Designed and tested on Kali Linux and Ubuntu ELK VM inside VirtualBox.
 
----
-
-## 🧠 Architecture
-
-![SOC Architecture](dashboards/soc_alert_architecture.png)
-
----
-
 ## ⚙️ Requirements
 
 Install the following tools on the corresponding VMs:
@@ -103,10 +95,12 @@ sudo systemctl restart filebeat
 ```bash
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.x.x
 ```
+
 🚨 SQL Injection
 ````bash
 curl "http://192.168.x.x/?id=1%27%20OR%20%271%27%3D%271"
 ```
+
 🚨 XSS Payload
 ```bash
 curl "http://192.168.x.x/?q=<script>alert(1)</script>"
@@ -118,4 +112,4 @@ sudo python3 /opt/email_alert.py
 ```
 
 ## 📊 Access Dashboard
-http://<ubuntu-elk-ip>:5601
+http://ubuntu-elk-ip:5601
