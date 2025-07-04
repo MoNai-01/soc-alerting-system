@@ -25,10 +25,6 @@ Install the following tools on the corresponding VMs:
 
     Filebeat 7.17+
 
-    Python 3.8+
-
-    pip install python-dotenv
-
 🛠️ On Ubuntu Server VM:
 
     Elasticsearch 7.17+
@@ -36,6 +32,11 @@ Install the following tools on the corresponding VMs:
     Logstash 7.17+
 
     Kibana 7.17+
+
+    Python 3.8+
+
+    pip install python-dotenv
+
 
 ## ⚙️ How to Run
 
@@ -70,7 +71,7 @@ cp scripts/email_alert.py /opt/
 cp .env.example /opt/.env
 nano /opt/.env
 ```
-4.1. Add
+ Add
 ```bash
 EMAIL_ADDRESS=youremail@gmail.com
 EMAIL_PASSWORD=your_app_password
